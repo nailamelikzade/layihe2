@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Roboto", sans-serif;
+}
+.header {
+    background-color: #F5F5F6;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5vw;
+}
+ol {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: 5vw;
+    gap:3vw;
+    padding-top:1vw;
+    width: 30vw;
+}
+.login {
+    position: absolute;
+    right: 10%;
+    top:2%;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border:0px;
+    border-radius: 4px;
+}
+.logo {
+    width:8vw;
+    margin-left:7vw;
+}
+.block1{
+    margin-left:7vw;
+    margin-top:5vh;
+    width: 20vw;
+}
+.block1-inside {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    margin-top: 2vh;
+    
+}
+.block1-inside div{
+    border: 1px solid #E5E5E5;
+    width: 20vw; 
+    text-align: center;
+    padding-top: 1vh;
+    
+}
+.block1 span  {
+    border:0px;
+}
+.firstDiv {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.lastDiv {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.block1 p {
+    color:#9F9F9F
+}
+.block1-inside div{
+    color:#9F9F9F;
+}
+.main-h1 {
+    margin-left: 7vw;
+    margin-top: 9vh;
+    font-size: 3vw;
+}
+.blockes {
+    display: flex;
+    flex-direction: row;
+}
+
+
+header ol li {
+    color:#959BA4
+}
+
+header ol li:hover {
+    color:black;
+    cursor: pointer;
+}
+.inputs {
+    width: 90%;
+    height: 100%;
+    border:0px;
+    padding-left: 1vw;
+    font-size: 1.7vw;
+    outline:none;
+}
+
+.block1-inside div.active {
+    background-color: #833AE0;
+    color: white;
+}
+.block1-bottom {
+    border: 1px solid #E5E5E5;
+    margin-top: 4vh;
+    width: 20vw;
+    height: 17vh;
+    border-radius: 3px;
+    width: 25vw;
+}
+.bottomDivs {
+    width:6vw;
+    background-color: #833AE0;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+}
+.div1 {
+    display: flex;
+    flex-direction: row;
+}
+.div2 {
+    display: flex;
+    flex-direction: row;
+}
+.buy-value {
+    width: 19vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.sell-value {
+    width: 19vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 900;
+}
+#offlineMessage {
+    background-color: #ffcccc;
+    display:inline-block;
+    width: 50%;
+    height: 90px;
+    text-align: center;
+    margin-left: 7vw;
+    position: absolute;
+    top: 65vh;
+    padding-top:3vw;
+    font-weight: 900;
+    font-size: 1.5vw;   
+}
+
+@media screen and (min-width: 1600px) {
+
+    .main-h1 {
+        font-size: 42px;
+    }
+
+    .block1 {
+        width: 350px;
+    }
+
+    .block1-bottom {
+        width: 350px;
+    }
+
+    .buy-value,
+    .sell-value {
+        font-size: 30px;
+    }
+
+    .inputs {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 120px;
+        margin-left: 10px;
+    }
+
+    ol {
+        gap: 18px;
+        margin-left: 20px;
+        width: auto;
+        font-size: 14px;
+    }
+
+    .login {
+        right: 20px;
+        top: 10px;
+    }
+
+    .main-h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+      .blockes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .block1 {
+        width: 300px;
+        margin-left: 0;
+    }
+
+    .block-right {
+        width: 620px;
+    }
+
+    .block1-bottom {
+        width: 100%;
+    }
+
+    .buy-value,
+    .sell-value {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .inputs {
+        font-size: 28px;
+    }
+
+    #offlineMessage {
+        width: 80%;
+        font-size: 20px;
+        padding-top: 25px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 140px;
+        margin-left: 0;
+    }
+
+    ol {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+    .login {
+        position: static;
+    }
+
+    .main-h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .blockes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block1 {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .block1-inside div {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 5px;
+    }
+
+    .block1-bottom {
+        width: 100%;
+        height: 100px;
+    }
+
+    .inputs {
+        font-size: 26px;
+    }
+
+    .buy-value,
+    .sell-value {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .bottomDivs {
+        width: 90px;
+        font-size: 18px;
+    }
+
+    #offlineMessage {
+        position: static;
+        width: 90%;
+        margin: 30px auto;
+        display: block;
+        font-size: 18px;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .main-h1 {
+        font-size: 26px;
+    }
+
+    ol {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .block1 p {
+        font-size: 14px;
+    }
+
+    .block1-inside div {
+        font-size: 12px;
+        padding-top: 14px;
+    }
+
+    .inputs {
+        font-size: 22px;
+    }
+
+    .buy-value,
+    .sell-value {
+        font-size: 20px;
+    }
+
+    .bottomDivs {
+        width: 70px;
+        font-size: 14px;
+    }
+
+    #offlineMessage {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .main-h1 {
+        font-size: 22px;
+    }
+
+    .inputs {
+        font-size: 18px;
+    }
+
+    .buy-value,
+    .sell-value {
+        font-size: 18px;
+    }
+
+    .block1-inside div {
+        font-size: 11px;
+    }
+
+    ol {
+        font-size: 11px;
+    }
+}

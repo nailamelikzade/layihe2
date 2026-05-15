@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="Logo">
+        <ol>
+            <li>Bank</li>
+            <li>Biznes</li>
+            <li>Fərdi</li>
+            <li>Kart</li>
+            <li>Onlayn</li>
+            <li>Müraciət</li>
+            <li>Haqqımızda</li>
+        </ol>
+        <div>
+            <button class="login">Login</button>
+        </div>
+    </header>
+    <main>
+
+
+        <h1 class="main-h1">Valyuta dəyişdir</h1>
+        <div class="blockes">
+            <div class="block1">
+                <p>Daxil et/Dəyiş</p>
+                <div class="block1-inside">
+                    <div class="firstDiv active">RUB</div>
+                    <div>USD</div>
+                    <div>EUR</div>
+                    <div class="lastDiv">GBP</div>
+                </div>
+
+                <div class="block1-bottom">
+                    <input class="inputs input1" type="text" placeholder="0.00">
+                </div>
+
+            </div>
+
+            <div class="block1">
+                <p>Daxil et/Dəyiş</p>
+                <div class="block1-inside block2">
+                    <div class="firstDiv">RUB</div>
+                    <div class="active">USD</div>
+                    <div>EUR</div>
+                    <div class="lastDiv">GBP</div>
+                </div>
+
+                <div class="block1-bottom">
+                    <input class="inputs input2" type="text" placeholder="0.00">
+                </div>
+
+            </div>
+
+            <div class="block1 block-right">
+                <p>Hansi bank</p>
+                <div class="block1-inside block3">
+                    <div class="firstDiv active">ABC</div>
+                    <div>NEW</div>
+                    <div>AME</div>
+                    <div class="lastDiv">RED</div>
+                </div>
+                <!-- 
+            <div class=" last-blocks block1-bottom div1">
+                <div>BUY</div>
+            </div>
+            <div class="last-blocks block1-bottom div2">
+                <div>SELL</div>
+            </div> -->
+
+                <div class="block1-bottom div1">
+                    <div class="bottomDivs">BUY</div>
+                    <div class= "buy-value"></div>
+                </div>
+
+                <div class="block1-bottom div2">
+                    <div class="bottomDivs">SELL</div>
+                    <div class="sell-value"></div>
+                </div>
+
+            </div>
+        </div>
+        <div id="offlineMessage" style="display: none; color: red;">You are offline.</div>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
