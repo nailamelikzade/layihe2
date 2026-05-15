@@ -96,9 +96,8 @@ input1.addEventListener("input", () => {
         }
     }
     if (navigator.onLine) {
-        // fetch(`http://localhost:3000/convert/${from_currency}`)
-        const API_URL = "http://localhost:3000";
-        fetch(`${API_URL}/convert/${from_currency}`)
+        const API_URL = "https://open.er-api.com/v6/latest";
+        fetch(`${API_URL}/${from_currency}`)
             .then(response => response.json())
             .then(data => {
 
@@ -187,7 +186,8 @@ input2.addEventListener("input", () => {
         }
     }
     if (navigator.onLine) {
-        fetch(`http://localhost:3000/convert/${from_currency}`)
+        const API_URL = "https://open.er-api.com/v6/latest";
+        fetch(`${API_URL}/${from_currency}`)
             .then(response => response.json())
             .then(data => {
                 const amount = parseFloat(input2.value);
