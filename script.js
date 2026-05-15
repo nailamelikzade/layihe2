@@ -96,16 +96,19 @@ input1.addEventListener("input", () => {
         }
     }
     if (navigator.onLine) {
-        const API_URL = "https://open.er-api.com/v6/latest";
-        fetch(`${API_URL}/${from_currency}`)
+        const API_URL = "https://api.exchangerate.host/latest";
+        fetch(`${API_URL}?base=${from_currency}`)
             .then(response => response.json())
             .then(data => {
+                if (!data || !data.rates || !data.rates[to_currency]) {
+                    console.error('Invalid exchange API response:', data);
+                    return;
+                }
 
                 localStorage.setItem(
                     from_currency,
                     JSON.stringify(data)
                 );
-
 
                 let val1 = parseFloat(input1.value) || 0;
                 input2.value = (val1 * data.rates[to_currency]).toFixed(4);
@@ -186,10 +189,14 @@ input2.addEventListener("input", () => {
         }
     }
     if (navigator.onLine) {
-        const API_URL = "https://open.er-api.com/v6/latest";
-        fetch(`${API_URL}/${from_currency}`)
+        const API_URL = "https://api.exchangerate.host/latest";
+        fetch(`${API_URL}?base=${from_currency}`)
             .then(response => response.json())
             .then(data => {
+                if (!data || !data.rates || !data.rates[to_currency]) {
+                    console.error('Invalid exchange API response:', data);
+                    return;
+                }
                 const amount = parseFloat(input2.value);
                 input1.value = (amount / data.rates[to_currency]).toFixed(4);
                 if ((document.querySelector(".block3 .active") && document.querySelector(".block3 .active").textContent == "ABC")) {
